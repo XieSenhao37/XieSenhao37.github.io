@@ -1,0 +1,115 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	border: 0;
+	margin: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	background-color: #1F1E1E;
+}
+nav{
+	width: 90%;
+	left: 0;
+	right: 0;
+	top: 0;
+	margin: auto;
+	position:fixed;
+	z-index: 999;
+}
+nav a{
+	font-family: Consolas;
+	display: block;
+	text-decoration: none;
+	color:#F67C34;
+	float: right;
+	padding: 25px;
+	font-size: 1.5em;
+}
+nav a:first-child{
+	float: left;
+}
+#wrap{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    min-height: 100%;
+    height: auto;
+}
+#penguin{
+	display: block;
+	float: left;
+	position: absolute;
+	bottom: 0;
+	left: 10%;
+	width: 30%;
+	min-width: 550px;
+}
+#search{
+	position: absolute;
+	top:43%;
+	right: 0;
+	min-width: 450px;
+	min-height: 40px;
+	width: 50%;
+	height: 14%;
+	border-radius: 100px;
+	box-sizing: border-box;
+	padding-left: 4%;
+	font-size: 1.2em;
+}
+button{
+	position: absolute;
+	top:43%;
+	right: 0;
+	min-width: 140px;
+	min-height: 40px;
+	height: 14%;
+	border-radius: 0  100px 100px 0;
+	box-sizing: border-box;
+	background-image: url("../image/资源 35.png");
+	background-size: 40%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+@media (max-width: 1300px) {
+	#search{
+		top:23%;
+		width: 90%;
+		height: 10%;
+		border-radius: 100px;
+	}
+	#penguin{
+		left: 25%;
+	}
+	button{
+		top:23%;
+		height: 10%;
+		min-width: 100px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {    
+	#search{
+		width: 90%;
+		height: 10%;
+		border-radius: 100px;
+	}
+	#penguin{
+		left: 25%;
+	}
+}
+@media (max-width: 767px) {
+	#search{
+		width: 90%;
+		height: 10%;
+		border-radius: 100px;
+	} 
+	#penguin{
+		min-width: 480px;
+		left: 15%;
+	}
+}

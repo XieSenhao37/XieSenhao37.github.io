@@ -1,133 +1,131 @@
 @charset "utf-8";
 /* CSS Document */
-*{
-	border: 0;
-	margin: 0;
+* {
+  border: 0;
+  margin: 0;
 }
-nav{
-	width: 90%;
-	left: 0;
-	right: 0;
-	top: 0;
-	margin: auto;
-	position:fixed;
-	z-index: 999;
+nav {
+  width: 90%;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  position: fixed;
+  z-index: 999;
 }
-nav a{
-	font-family: Consolas;
-	display: block;
-	text-decoration: none;
-	color:#F67C34;
-	float: right;
-	padding: 20px;
+nav a {
+  font-family: Consolas;
+  display: block;
+  text-decoration: none;
+  color: #f67c34;
+  float: right;
+  padding: 20px;
 }
-nav a:first-child{
-	float: left;
+nav a:first-child {
+  float: left;
 }
-#wrap{
-	margin: auto;
-	width: 90%;
-	margin-top: 80px;
+#wrap {
+  margin: auto;
+  width: 90%;
+  margin-top: 80px;
 }
-#head{
-	width: 100%;
-	display: flex;
-	justify-content:center;
-	flex-wrap: wrap;
-	align-items: center;
-	text-align: left;
+#head {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: left;
 }
-.jieshao{
-	padding-top: 10px;
+.jieshao {
+  padding-top: 10px;
 }
-.jieshao h1{
-	color: #ffa045;
-	padding: 0;
-	margin: 0;
-	font-size: 2.5em;
+.jieshao h1 {
+  color: #ffa045;
+  padding: 0;
+  margin: 0;
+  font-size: 2.5em;
 }
-.jieshao h2{
-	font-weight: normal;
-	padding: 0;
-	margin: 0;
-	
+.jieshao h2 {
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
 }
-.jieshao p{
-	font-weight: normal;
-	color: #808080;
-	padding: 0;
-	margin-top: 0.5em;
-	font-size: 0.8em;
+.jieshao p {
+  font-weight: normal;
+  color: #808080;
+  padding: 0;
+  margin-top: 0.5em;
+  font-size: 0.8em;
 }
-.photo{
-	display: block;
-	width: 300px;
-	height: 300px;
-	padding-right: 50px;
+.photo {
+  display: block;
+  width: 300px;
+  height: 300px;
+  padding-right: 50px;
 }
-.dengqi{
-	display: block;
-	margin: auto;
-	margin-top: 10%;
+.dengqi {
+  display: block;
+  margin: auto;
+  margin-top: 10%;
 }
-#selfintro{
-	line-height: 2em;
-	color: #1F1F1F;
-	width: 80%;
-	text-align: justify;
-	margin: auto;
-	margin-top: 10%;
+#selfintro {
+  line-height: 2em;
+  color: #1f1f1f;
+  width: 80%;
+  text-align: justify;
+  margin: auto;
+  margin-top: 10%;
 }
-.xiaozi{
-	margin: 0;
-	padding: 0;
-	font-size: 0.5em;
-	color: #808080;
-	font-weight: lighter;
+.xiaozi {
+  margin: 0;
+  padding: 0;
+  font-size: 0.5em;
+  color: #808080;
+  font-weight: lighter;
 }
-#awards{
-	width: 80%;
-	margin: auto;
-	margin-top: 3%;
+#awards {
+  width: 80%;
+  margin: auto;
+  margin-top: 3%;
 }
-#awards tr td{
-	text-align: center;
-	border-bottom: 0.7px solid #808080;
-	padding:30px 0;
-	
+#awards tr td {
+  text-align: center;
+  border-bottom: 0.7px solid #808080;
+  padding: 30px 0;
 }
-#awards td:first-child{
-	text-align: left;
-	padding-left: 7%;
+#awards td:first-child {
+  text-align: left;
+  padding-left: 7%;
 }
-footer{
-	background-color: #ffa045;
-	padding: 10% 0 5%;
-	
-	text-align: center;
-	margin: auto;
-	width: 100%;
-	margin-top: 10%;
+footer {
+  background-color: #ffa045;
+  padding: 10% 0 5%;
+
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  margin-top: 10%;
 }
-.endwords{
-	font-size: 2em;
+.endwords {
+  font-size: 2em;
 }
-#footnav{
-	display: flex;
-	width: 80%;
-	margin: 6% auto 0;
-	justify-content: space-around;
-	}
+#footnav {
+  display: flex;
+  width: 80%;
+  margin: 6% auto 0;
+  justify-content: space-around;
+}
 #footnav a {
-	display: block;
-	box-sizing: border-box;
-	width: 80px;
-	font-size: 1em;
-	text-decoration: none;
-	color: #000;
-	line-height: 0.4em;
-	}
-#footnav a:hover>span{
-		padding-bottom: 5px;
-		border-bottom:  2px solid #000;
-	}
+  display: block;
+  box-sizing: border-box;
+  width: 80px;
+  font-size: 1em;
+  text-decoration: none;
+  color: #000;
+  line-height: 0.4em;
+}
+#footnav a:hover > span {
+  padding-bottom: 5px;
+  border-bottom: 2px solid #000;
+}

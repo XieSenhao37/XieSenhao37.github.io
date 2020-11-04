@@ -225,5 +225,20 @@
       form[0].style.animation = "myfirst 3s";
       form[0].style.animationFillMode = "forwards";
     }
+    //媒体查询
+    var indicator = document.createElement("div");
+    indicator.className = "state-indicator";
+    document.body.appendChild(indicator);
+    function whichState() {
+      let state = window
+        .getComputedStyle(document.querySelector(".state-indicator"), ":before")
+        .getPropertyValue("content");
+      var bgpenguin = document.querySelector(".bgpenguin").querySelector("img");
+      //如果是mobile就更换成长企鹅图
+      if (state == '"mobile"') {
+        bgpenguin.src = "Image/penguin.png";
+      } else bgpenguin.src = "Image/penguinNoEye.png";
+    }
+    setInterval(whichState, 10);
   </script>
 </html>

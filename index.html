@@ -207,11 +207,14 @@
   </body>
   <script>
     // 设置高度为窗口高度
-    var getWinsHeight = document.documentElement.clientHeight;
-    var bgs = document.getElementsByClassName("topBg");
-    for (var i = 0; i < bgs.length; i++) {
-      bgs[i].style.height = getWinsHeight + "px";
+    function setHeight() {
+      var getWinsHeight = document.documentElement.clientHeight;
+      var bgs = document.getElementsByClassName("topBg");
+      for (var i = 0; i < bgs.length; i++) {
+        bgs[i].style.height = getWinsHeight + "px";
+      }
     }
+    setInterval(setHeight, 10);
     // 控制眼睛移动
     document.onmousemove = function (e) {
       var eye = document.getElementById("eye");

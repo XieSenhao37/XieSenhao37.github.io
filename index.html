@@ -240,7 +240,11 @@
       //如果是mobile就更换成长企鹅图
       if (state == '"mobile"') {
         bgpenguin.src = "Image/penguin.png";
-      } else bgpenguin.src = "Image/penguinNoEye.png";
+        document.getElementById("eye").style.display = "none";
+      } else {
+        bgpenguin.src = "Image/penguinNoEye.png";
+        document.getElementById("eye").style.display = "block";
+      }
     }
     setInterval(whichState, 10);
   </script>

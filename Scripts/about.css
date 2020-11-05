@@ -19,7 +19,8 @@ nav a {
   text-decoration: none;
   color: #f67c34;
   float: right;
-  padding: 20px;
+  padding: 25px;
+  font-size: 1.5em;
 }
 nav a:first-child {
   float: left;

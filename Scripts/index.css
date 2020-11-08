@@ -11,25 +11,24 @@
   top: -999em;
   left: -999em;
 }
-
-@media screen and (min-width: 1201px) {
-  /* 当前设备为电脑 */
+/* 当前设备为电脑 */
+@media screen and (min-width: 1081px) {
   .state-indicator:before {
     content: "desktop";
   }
   body {
     width: 100%;
     height: 100%;
-    background-color: #fdf7f2;
+    background-color: rgba(253, 247, 242, 1);
   }
   nav {
-    width: 90%;
-    left: 0;
-    right: 0;
-    top: 0;
-    margin: auto;
+    width: 100%;
     position: fixed;
     z-index: 999;
+  }
+
+  nav a:nth-child(2) {
+    margin-right: 5%;
   }
   nav a {
     font-family: Consolas;
@@ -41,6 +40,7 @@
     font-size: 1.5em;
   }
   nav a:first-child {
+    margin-left: 5%;
     float: left;
   }
   #wrap {
@@ -50,6 +50,7 @@
 
   #top {
     width: 100%;
+    height: 100%;
     min-height: 100%;
     position: absolute;
   }
@@ -105,11 +106,11 @@
     min-width: 350px;
   }
   video {
-    display: block;
-    position: absolute;
+    /* display: block; */
+    /* position: absolute;
     top: 100%;
     left: 0;
-    right: 0;
+    right: 0; */
     width: 100%;
     margin: auto;
   }
@@ -117,10 +118,10 @@
     width: 100%;
     min-height: 100%;
     height: auto;
-    position: absolute;
+    /* position: absolute; */
     overflow: hidden;
     text-align: center;
-    top: 240%;
+    /* top: 240%; */
     left: 0;
   }
   #selfintro p {
@@ -141,60 +142,63 @@
   }
 
   #demonstrate {
-    position: absolute;
-    top: 358%;
-    left: 0;
+    position: relative;
+    /* top: 358%;
+    left: 0; */
     width: 100%;
     min-height: 100%;
     height: auto;
   }
   .demo {
-    position: absolute;
+    /* position: absolute; */
+    position: relative;
     overflow: hidden;
     width: 100%;
     min-height: 100%;
     height: auto;
-    top: 0%;
-    left: 0;
+    /* top: 0%;
+    left: 0; */
     margin-bottom: 0px;
   }
   .demo:nth-child(2) {
-    position: absolute;
+    /* position: absolute; */
     overflow: hidden;
     width: 100%;
     min-height: 100%;
     height: auto;
-    top: 100%;
-    left: 0;
+    /* top: 100%;
+    left: 0; */
     margin-bottom: 0px;
   }
   .demo:nth-child(3) {
-    position: absolute;
+    /* position: absolute; */
     overflow: hidden;
     width: 100%;
     min-height: 100%;
     height: auto;
-    top: 200%;
-    left: 0;
+    /* top: 200%;
+    left: 0; */
     margin-bottom: 0px;
   }
   .demoimg {
-    position: absolute;
+    /* position: absolute; */
     overflow: hidden;
-    height: 100%;
-    top: 0%;
+    width: 100%;
+    /* top: 0%;
     left: 0;
-    right: 0;
+    right: 0; */
     vertical-align: middle;
     transition: transform 0.5s;
   }
-  .name {
+  #demoLeft .name {
     position: absolute;
     width: 50%;
     height: 100%;
     background-color: #ffeddc;
-    right: 0;
-    top: 0;
+    /* right: 0;
+    top: 0;  */
+    left: 50%;
+    top: 0%;
     padding: 15% 10%;
     box-sizing: border-box;
     transition: transform 0.5s;
@@ -237,7 +241,8 @@
   .demoimg:hover ~ .name {
     transform: translateX(100%);
   }
-  .demo:nth-child(2) > .name {
+
+  #demoRight .name {
     position: absolute;
     width: 50%;
     height: 100%;
@@ -249,23 +254,22 @@
     box-sizing: border-box;
     transition: transform 0.5s;
   }
-  .demo:nth-child(2) > .name > .demodecorate {
+  #demoRight .name .demodecorate {
     background-color: #592e0e;
   }
-  .demo:nth-child(2) > .demoimg:hover ~ .name {
+  #demoRight .demoimg:hover ~ .name {
     transform: translateX(-100%);
   }
 
   footer {
-    position: absolute;
-    top: 700%;
-    left: 0;
+    position: relative;
+    margin-top: 200px;
     width: 100%;
-    min-height: 100%;
-    height: auto;
+    height: 100%;
     text-align: center;
   }
   footer img {
+    width: 60%;
     margin-bottom: 3%;
   }
   #footer2 {
@@ -275,18 +279,14 @@
     border-bottom: 2px solid #ffa045;
   }
   #poster {
-    position: absolute;
+    position: relative;
     width: 100%;
-    min-height: 100%;
-    height: auto;
-    top: 100%;
-    left: 0;
-    right: 0;
-    margin: auto;
+    height: 50%;
+
+    margin: 100px auto;
   }
   #Form {
-    position: absolute;
-    top: 3%;
+    position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -300,8 +300,6 @@
     display: block;
     width: 30%;
     height: auto;
-    /* min-height: 550px;
-    max-height: 550px; */
     background-color: #fff;
     padding: 3% 2% 3% 2%;
     box-sizing: border-box;
@@ -352,21 +350,8 @@
     font-size: 0.8em;
     color: #ffa045;
   }
-  .post1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3%;
-    width: 70%;
-    margin: auto;
-  }
+  .post1,
   .post2 {
-    position: absolute;
-    top: 0%;
-    left: 0;
-    right: 0;
-    height: 3%;
     width: 70%;
     margin: auto;
   }
@@ -387,12 +372,13 @@
     width: 100%;
     min-height: 60%;
     height: auto;
-    top: 190%;
+    /* top: 190%; */
+    margin-top: 200px;
     left: 0;
     z-index: 2;
     background-color: #292929;
     box-sizing: border-box;
-    padding: 10%;
+    padding-bottom: 10%;
     background-image: url("../Image/footerBg.png");
     background-size: 100%;
     background-repeat: no-repeat;
@@ -408,6 +394,7 @@
     opacity: 0;
     transition: opacity 0.3s;
     width: 12%;
+    bottom: 100px;
   }
   #totopa {
     display: block;
@@ -415,6 +402,7 @@
     z-index: 1;
     left: 0;
     right: 0;
+    bottom: 200px;
     margin: auto;
     margin-top: 2%;
     box-sizing: border-box;
@@ -457,352 +445,9 @@
     opacity: 1;
   }
 }
-/* before 768px */
-@media screen and (max-width: 1200px) and (min-width: 1081px) {
-  /* 当前设备为平板电脑 */
-  .state-indicator:before {
-    content: "tablet";
-  }
-  body {
-    background-color: #fdf7f2;
-  }
-  #wrap {
-    width: 100%;
-    margin: auto;
-  }
-  nav {
-    width: 90%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    position: fixed;
-    z-index: 999;
-  }
-  nav a {
-    font-family: Consolas;
-    display: block;
-    text-decoration: none;
-    color: #f67c34;
-    float: right;
-    padding: 20px;
-  }
-  nav a:first-child {
-    float: left;
-  }
 
-  #top {
-    width: 100%;
-    height: 725px;
-    position: relative;
-    overflow: hidden;
-  }
-  #eye {
-    width: 3%;
-    position: absolute;
-    top: 31%;
-    left: 49%;
-    z-index: 1;
-  }
-  .bgpenguin {
-    display: block;
-    position: absolute;
-    z-index: 1;
-    bottom: 0%;
-    left: 0;
-    right: 0;
-    width: 60%;
-    height: auto;
-    margin: auto;
-    min-width: 600px;
-  }
-  .jiantou {
-    display: block;
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    min-width: 480px;
-  }
-  .bgt1 {
-    display: block;
-    position: absolute;
-    z-index: 1;
-    top: 20%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    min-width: 400px;
-  }
-  .bgt2 {
-    display: block;
-    position: absolute;
-    z-index: 1;
-    bottom: 15%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    min-width: 350px;
-  }
-
-  #selfintro {
-    width: 100%;
-    height: 725px;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    margin-top: 50px;
-  }
-  #selfintro p {
-    display: block;
-    width: 70%;
-    text-align: justify;
-    margin: 12% auto 6%;
-    text-indent: 2em;
-    font-family: "微软雅黑";
-    line-height: 2em;
-    background-image: url("../Image/quotationMark.png");
-    background-size: 1em;
-    background-position: left top;
-    background-repeat: no-repeat;
-  }
-  #selfintro img {
-    min-width: 250px;
-  }
-
-  #demonstrate {
-    width: 100%;
-    margin-top: 10%;
-    min-height: 725px;
-  }
-  .demo {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    background-color: #000;
-    margin-bottom: 0px;
-  }
-  .demoimg {
-    vertical-align: middle;
-    transition: transform 0.5s;
-  }
-  .name {
-    display: none;
-  }
-  .name1 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 5%;
-    color: #fff;
-  }
-  .name1 h1 {
-    padding: 0;
-    margin-bottom: 0.1em;
-    opacity: 0;
-    transition: opacity 0.5s;
-  }
-  .name1 p {
-    padding: 0;
-    margin: 0;
-    opacity: 0;
-    transition: opacity 0.5s;
-  }
-  .demoimg:hover {
-    opacity: 0.8;
-    transform: scale(1.1, 1.1);
-  }
-  .demoimg:hover ~ .name1 h1 {
-    opacity: 1;
-  }
-  .demoimg:hover ~ .name1 p {
-    opacity: 1;
-  }
-
-  footer {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    min-height: 725px;
-    margin-top: 14%;
-    text-align: center;
-  }
-  footer img {
-    margin-bottom: 3%;
-  }
-  #footer2 {
-    display: none;
-  }
-  #youxiang {
-    border-bottom: 2px solid #ffa045;
-  }
-  .post1,
-  .post2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3%;
-    margin: auto;
-    display: block;
-    width: 70%;
-  }
-  #poster {
-    position: relative;
-    width: 100%;
-    min-height: 525px;
-    overflow: hidden;
-  }
-  #Form {
-    position: absolute;
-    top: 3%;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-  #poster form {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    top: 0;
-    display: block;
-    width: 47%;
-    height: auto;
-    background-color: #fff;
-    padding: 3% 2% 3% 2%;
-    box-sizing: border-box;
-    text-align: left;
-  }
-  ::-webkit-input-placeholder {
-    font-family: "Aa弯弯";
-    font-size: 1.2em;
-  }
-  #formcomment {
-    display: block;
-    min-width: 90%;
-    max-width: 90%;
-    min-height: 100px;
-    max-height: 100px;
-    border: none;
-    border: 1px solid #ffa045;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  #formname {
-    display: block;
-    min-width: 50%;
-    max-width: 50%;
-    border: none;
-    border: 1px solid #ffa045;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  #formemial {
-    display: block;
-    min-width: 50%;
-    max-width: 50%;
-    border: none;
-    border: 1px solid #ffa045;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  #poster label {
-    font-size: 0.8em;
-    color: #ffa045;
-  }
-
-  #formsubmit {
-    display: block;
-    padding: 5% 10%;
-    margin: 0 auto;
-    margin-top: 8%;
-    background-color: #ffa045;
-    border-radius: 100px;
-    color: white;
-    border: none;
-  }
-
-  #totop {
-    position: relative;
-    width: 100%;
-    min-height: 400px;
-    z-index: 2;
-    background-color: #292929;
-    box-sizing: border-box;
-    padding: 10%;
-    background-image: url("../Image/footerBg.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: bottom;
-  }
-  .foot {
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    padding: 1%;
-    margin: auto;
-    opacity: 0;
-    transition: opacity 0.3s;
-    width: 15%;
-  }
-  #totopa {
-    display: block;
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    right: 0;
-    margin: auto;
-    margin-top: 2%;
-    box-sizing: border-box;
-    font-size: 1.5em;
-    width: 2em;
-    padding: 10px 0;
-    text-decoration: none;
-    color: #fff;
-    line-height: 0.4em;
-  }
-  #footnav {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    height: 100px;
-    width: 700px;
-    padding: 40px 0;
-    box-sizing: border-box;
-  }
-  #footnav a {
-    display: block;
-    float: left;
-    box-sizing: border-box;
-    width: 80px;
-    font-size: 1em;
-    text-decoration: none;
-    color: #000;
-    line-height: 0.4em;
-  }
-  #footnav a:nth-child(2) {
-    margin: 0 230px;
-  }
-  #totop a:hover > span {
-    padding-bottom: 5px;
-    border-bottom: 2px solid #000;
-  }
-  #totop a:first-child:hover > span {
-    padding-bottom: 5px;
-    border-bottom: 2px solid #fff;
-  }
-  #totopa:hover ~ .foot {
-    opacity: 1;
-  }
-}
-/* and (max-width: 768px) and (min-width: 480px)*/
+/* 当前设备为手机 */
 @media screen and (max-width: 1080px) {
-  /* 当前设备为手机 */
   .state-indicator:before {
     content: "mobile";
   }
@@ -815,12 +460,12 @@
     margin: auto;
   }
   nav {
-    width: 90%;
-    left: 0;
-    right: 0;
-    margin: auto;
+    width: 100%;
     position: fixed;
     z-index: 999;
+  }
+  nav a:nth-child(2) {
+    margin-right: 5%;
   }
   nav a {
     font-family: Consolas;
@@ -828,14 +473,16 @@
     text-decoration: none;
     color: #f67c34;
     float: right;
-    padding: 20px;
+    padding: 25px;
+    font-size: 1.5em;
   }
   nav a:first-child {
+    margin-left: 5%;
     float: left;
   }
   #top {
     width: 100%;
-    height: 725px;
+    height: 100%;
     position: relative;
     overflow: hidden;
   }
@@ -891,10 +538,12 @@
     margin-top: 50px;
   }
   #selfintro p {
-    display: block;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%);
     width: 70%;
     text-align: justify;
-    margin: 12% auto 6%;
     text-indent: 2em;
     font-family: "微软雅黑";
     line-height: 2em;
@@ -904,7 +553,11 @@
     background-repeat: no-repeat;
   }
   #selfintro img {
+    position: absolute;
     min-width: 250px;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%);
   }
 
   #demonstrate {
@@ -921,6 +574,7 @@
     margin-bottom: 0px;
   }
   .demoimg {
+    width: 100%;
     vertical-align: middle;
     transition: transform 0.5s;
   }
@@ -1059,7 +713,8 @@
   }
 
   #totop {
-    position: relative;
+    position: absolute;
+    bottom: 0;
     width: 100%;
     min-height: 400px;
     z-index: 2;

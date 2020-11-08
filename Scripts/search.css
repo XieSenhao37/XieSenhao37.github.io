@@ -11,13 +11,12 @@ body {
   background-color: #1f1e1e;
 }
 nav {
-  width: 90%;
-  left: 0;
-  right: 0;
-  top: 0;
-  margin: auto;
+  width: 100%;
   position: fixed;
-  z-index: 999;
+  z-index: 5;
+}
+nav a:nth-child(2) {
+  margin-right: 5%;
 }
 nav a {
   font-family: Consolas;
@@ -29,6 +28,7 @@ nav a {
   font-size: 1.5em;
 }
 nav a:first-child {
+  margin-left: 5%;
   float: left;
 }
 #wrap {

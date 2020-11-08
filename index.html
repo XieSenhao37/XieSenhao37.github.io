@@ -29,30 +29,32 @@
       <a href="Scripts/work.html">Work</a>
     </nav>
     <div id="wrap">
-      <div class="topBg" id="top">
-        <img
-          class="jiantou"
-          src="Image/arrowhead.png"
-          alt="jiantou"
-          width="80%"
-        />
-        <div class="bgpenguin">
-          <img src="Image/penguinNoEye.png" alt="bg" width="100%" />
-          <img id="eye" src="Image/eye.png" alt="" />
-        </div>
+      <div class="fullScreen" style="position: relative; width: 100%">
+        <div class="topBg" id="top">
+          <img
+            class="jiantou"
+            src="Image/arrowhead.png"
+            alt="jiantou"
+            width="80%"
+          />
+          <div class="bgpenguin">
+            <img src="Image/penguinNoEye.png" alt="bg" width="100%" />
+            <img id="eye" src="Image/eye.png" alt="" />
+          </div>
 
-        <img
-          class="bgt1"
-          src="Image/title.png"
-          alt="penguin studio"
-          width="90%"
-        />
-        <img
-          class="bgt2"
-          src="Image/welcomewords.png"
-          alt="welcome"
-          width="40%"
-        />
+          <img
+            class="bgt1"
+            src="Image/title.png"
+            alt="penguin studio"
+            width="90%"
+          />
+          <img
+            class="bgt2"
+            src="Image/welcomewords.png"
+            alt="welcome"
+            width="40%"
+          />
+        </div>
       </div>
 
       <video
@@ -65,7 +67,7 @@
         <source src="Image/MGanimation.mp4" type="video/mp4" />
       </video>
 
-      <div id="selfintro">
+      <div class="fullScreen" id="selfintro">
         <p>
           我是邓淇，来自深圳技术大学工业设计专业的大三学生，主修交互设计方向。“Penguin
           Studio”是我给网站起的名字，“企鹅”来源于的我的名字，其次“Penguin
@@ -75,86 +77,67 @@
         <img src="Image/photoEddie.png" alt="photo" width="22%" />
       </div>
 
-      <div id="demonstrate">
-        <div class="demo">
-          <img
-            class="demoimg"
-            src="Image/bowlDesign.jpg"
-            alt="畅想·SZTU"
-            width="100%"
-          />
-          <div class="name">
-            <h1>创意泡面碗</h1>
-            <div class="demodecorate"></div>
-            <p>以直升机为灵感<br />产品设计</p>
-          </div>
-          <div class="name1">
-            <h1>创意泡面碗</h1>
-            <p>以直升机为灵感的产品设计</p>
-          </div>
+      <div class="imgHeight demo" id="demoLeft">
+        <img class="demoimg" src="Image/bowlDesign.jpg" alt="畅想·SZTU" />
+        <div class="name">
+          <h1>创意泡面碗</h1>
+          <div class="demodecorate"></div>
+          <p>以直升机为灵感<br />产品设计</p>
         </div>
-
-        <div class="demo">
-          <img
-            class="demoimg"
-            src="Image/sztuStaitionery.jpg"
-            alt="畅想·SZTU"
-            width="100%"
-          />
-          <div class="name">
-            <h1>畅想·SZTU</h1>
-            <div class="demodecorate"></div>
-            <p>2020我的技大背包<br />文创设计</p>
-          </div>
-          <div class="name1">
-            <h1>畅想·SZTU</h1>
-            <p>2020我的技大背包文创设计</p>
-          </div>
-        </div>
-
-        <div class="demo">
-          <img
-            class="demoimg"
-            src="Image/xiangzuoUIdemo.jpg"
-            alt="畅想·SZTU"
-            width="100%"
-          />
-          <div class="name">
-            <h1>享做</h1>
-            <div class="demodecorate"></div>
-            <p>大学生社交型项目管理类软件<br />UI设计</p>
-          </div>
-          <div class="name1">
-            <h1>享做</h1>
-            <p>大学生社交型项目管理类软件</p>
-          </div>
+        <div class="name1">
+          <h1>创意泡面碗</h1>
+          <p>以直升机为灵感的产品设计</p>
         </div>
       </div>
 
-      <footer>
-        <img src="Image/endWords.png" alt="bg" width="80%" id="footer1" />
-        <img src="Image/endWordsSmall.png" alt="bg" width="80%" id="footer2" />
+      <div class="imgHeight demo" id="demoRight">
+        <img class="demoimg" src="Image/sztuStaitionery.jpg" alt="畅想·SZTU" />
+        <div class="name">
+          <h1>畅想·SZTU</h1>
+          <div class="demodecorate"></div>
+          <p>2020我的技大背包<br />文创设计</p>
+        </div>
+        <div class="name1">
+          <h1>畅想·SZTU</h1>
+          <p>2020我的技大背包文创设计</p>
+        </div>
+      </div>
+
+      <div class="imgHeight demo" id="demoLeft">
+        <img class="demoimg" src="Image/xiangzuoUIdemo.jpg" alt="畅想·SZTU" />
+        <div class="name">
+          <h1>享做</h1>
+          <div class="demodecorate"></div>
+          <p>大学生社交型项目管理类软件<br />UI设计</p>
+        </div>
+        <div class="name1">
+          <h1>享做</h1>
+          <p>大学生社交型项目管理类软件</p>
+        </div>
+      </div>
+
+      <footer class="fullScreen">
+        <img src="Image/endWords.png" alt="bg" id="footer1" />
+        <img src="Image/endWordsSmall.png" alt="bg" id="footer2" />
         <a href="mailto:1220732310@qq.com"
           ><img
             src="Image/email.png"
             alt="1220732310@qq.com"
             width="30%"
-            id="youxiang" /></a
-        ><br />
+            id="youxiang"
+        /></a>
 
         <div id="poster">
           <img
             src="Image/posterTop.png"
             alt="post"
-            width="100%"
             style="margin-bottom: 0; vertical-align: bottom"
             class="post1"
-          /><br />
+          />
           <div id="Form">
             <img
               src="Image/posterBottom.png"
               alt="post"
-              width="100%"
               style="margin-bottom: 0; vertical-align: top"
               class="post2"
             />
@@ -196,21 +179,32 @@
           <a href="#top" id="totopa"><span>TOP</span></a>
           <img class="foot" src="Image/toTop.png" alt="foot" width="100%" />
           <div id="footnav">
-            <a href="work.html"><span>Work</span></a>
-            <a href="about.html"><span>About</span></a>
-            <a href="contact.html"><span>Contact</span></a>
+            <a href="Scripts/work.html"><span>Work</span></a>
+            <a href="Scripts/about.html"><span>About</span></a>
+            <a href="Scripts/contact.html"><span>Contact</span></a>
           </div>
         </div>
       </footer>
     </div>
   </body>
   <script>
+    //读取鼠标位置,设置导航栏背景
+    var nav = document.getElementsByTagName("nav");
+    window.onscroll = function () {
+      var scrollTop = document.documentElement.scrollTop;
+      if (scrollTop > 100) {
+        nav[0].style.backgroundColor = "rgba(253, 247, 242, 0.7)";
+      } else {
+        nav[0].style.backgroundColor = "rgba(253, 247, 242, 1)";
+      }
+    };
     // 设置高度为窗口高度
     function setHeight() {
       var getWinsHeight = document.documentElement.clientHeight;
-      var bgs = document.getElementsByClassName("topBg");
-      for (var i = 0; i < bgs.length; i++) {
-        bgs[i].style.height = getWinsHeight + "px";
+      var fullScreens = document.getElementsByClassName("fullScreen");
+      // topDiv.style.height = getWinsHeight + "px";
+      for (var i = 0; i < fullScreens.length; i++) {
+        fullScreens[i].style.height = getWinsHeight + "px";
       }
     }
     setInterval(setHeight, 10);

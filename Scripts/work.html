@@ -399,6 +399,7 @@
     </div>
   </body>
   <script>
+    //点击弹出大图
     var imgs = document.getElementsByClassName("ws_img");
     console.log(imgs.length);
     console.log(imgs[0].src);
@@ -417,5 +418,16 @@
       popup.querySelector("img").src = src;
       popup.style.display = "block";
     }
+
+    //读取鼠标位置,设置导航栏背景
+    var nav = document.getElementsByTagName("nav");
+    window.onscroll = function () {
+      var scrollTop = document.documentElement.scrollTop;
+      if (scrollTop > 100) {
+        nav[0].style.backgroundColor = "rgba(255, 255, 255, 0.7)";
+      } else {
+        nav[0].style.backgroundColor = "rgba(255, 255, 255, 1)";
+      }
+    };
   </script>
 </html>

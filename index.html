@@ -64,7 +64,10 @@
         muted
         loop
       >
-        <source src="Image/MGanimation.mp4" type="video/mp4" />
+        <source
+          src="http://qjgk30bqx.hn-bkt.clouddn.com/MGanimation.mp4"
+          type="video/mp4"
+        />
       </video>
 
       <div class="fullScreen" id="selfintro">
@@ -74,7 +77,7 @@
           Studio”本就充满了幻想元素，我想通过此传达“解放想象力”的追求。
           设计上较擅长Illustration类的设计，喜欢运用色彩。设计还有很长的路要走，学习如逆水行舟，不进则退，只有不断学习丰富自己，才能够在茫茫中建起自己的小世界。
         </p>
-        <img src="Image/photoEddie.png" alt="photo" width="22%" />
+        <img src="Image/photoEddie.png" alt="photo" />
       </div>
 
       <div class="imgHeight demo" id="demoLeft">
@@ -116,7 +119,7 @@
         </div>
       </div>
 
-      <footer class="fullScreen">
+      <footer>
         <img src="Image/endWords.png" alt="bg" id="footer1" />
         <img src="Image/endWordsSmall.png" alt="bg" id="footer2" />
         <a href="mailto:1220732310@qq.com"
@@ -190,14 +193,30 @@
   <script>
     //读取鼠标位置,设置导航栏背景
     var nav = document.getElementsByTagName("nav");
-    window.onscroll = function () {
+    //节流
+    function debounce(fn, delay) {
+      let flag = false;
+      return function () {
+        if (flag) {
+          return false;
+        }
+        flag = true;
+        fn();
+        setTimeout(() => {
+          flag = false;
+        }, delay);
+      };
+    }
+    function setOpacity() {
+      console.log("onscroll调用了！");
       var scrollTop = document.documentElement.scrollTop;
-      if (scrollTop > 100) {
+      if (scrollTop >= 0) {
         nav[0].style.backgroundColor = "rgba(253, 247, 242, 0.7)";
       } else {
         nav[0].style.backgroundColor = "rgba(253, 247, 242, 1)";
       }
-    };
+    }
+    window.onscroll = debounce(setOpacity, 5000);
     // 设置高度为窗口高度
     function setHeight() {
       var getWinsHeight = document.documentElement.clientHeight;
@@ -239,6 +258,6 @@
         document.getElementById("eye").style.display = "block";
       }
     }
-    setInterval(whichState, 10);
+    setInterval(whichState, 1);
   </script>
 </html>
